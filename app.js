@@ -24,6 +24,7 @@ const taskRoutes = require('./src/routes/taskRoutes');
 // Inicializar la aplicación Express
 const app = express();
 
+
 // Conectar a MongoDB
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI,{

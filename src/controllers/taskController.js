@@ -13,6 +13,7 @@ exports.createTask = async (req, res) => {
   req.flash('success_msg', 'Tarea creada con éxito.');
   res.redirect('/tasks');
 };
+console.log('req.body');
 
 exports.getTasksall = async (req, res) => {
   const tasks = await Task.find();

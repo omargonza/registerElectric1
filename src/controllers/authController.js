@@ -15,6 +15,17 @@ exports.postLogin = passport.authenticate('local', {
 exports.getRegister = (req, res) => {
   res.render('register');
 };
+exports.postRegister = passport.authenticate('local', {
+  successRedirect: '/login',
+  failureRedirect: '/register',
+  failureFlash: true
+  
+});
+
+
+
+
+
 
 exports.postRegister = async (req, res) => {
   //console.log(req.body);
