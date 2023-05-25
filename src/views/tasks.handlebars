@@ -130,32 +130,32 @@
     <form action="/tasks" method="post">
       <div class="form-group">
         <label for="nombre_tablero">Nombre del tablero:</label>
-        <input type="text" name="nombre_tablero" class="form-control" required>
+        <input type="text" name="nombre_tablero" class="form-control" value="{{nombre_tablero}}" required>
       </div>
 
       <div class="form-group">
         <label for="circuito">Circuito:</label>
-        <input type="text" name="circuito" class="form-control" required>
+        <input type="text" name="circuito" class="form-control" value="{{circuito}}" required>
       </div>
 
       <div class="form-group">
         <label for="lugar">Lugar:</label>
-        <input type="text" name="lugar" class="form-control" required>
+        <input type="text" name="lugar" class="form-control" value="{{lugar}}" required>
       </div>
 
       <div class="form-group">
         <label for="fecha">Fecha:</label>
-        <input type="date" name="fecha" class="form-control" required>
+        <input type="date" name="fecha" class="form-control" value="{{fecha}}" required>
       </div>
 
       <div class="form-group">
         <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" class="form-control" required></textarea>
+        <textarea name="descripcion" class="form-control" value="{{descripcion}}" required>
       </div>
 
       <div class="form-group">
         <label for="username">Username:</label>
-        <input type="text" name="username" class="form-control" required>
+        <input type="text" name="username" class="form-control" value="{{username}}" required>
       </div>
 
       <button type="submit" class="btn btn-success btn-block ">Crear tarea</button>
