@@ -1,5 +1,6 @@
 // app.js
-
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const mongoose = require('mongoose');
 const MongoClient = require('mongodb').MongoClient;
@@ -8,14 +9,14 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
-const dotenv = require('dotenv');
+
 const flash = require('connect-flash');
 const bodyParser = require('body-parser');
 
 //app.use(bodyParser.json);
 //app.use(bodyParser.urlencoded({extended:false }));
 //app.use(express.static(path.join(__dirname, 'public')));
-dotenv.config();
+
 
 // Importar rutas
 const authRoutes = require('./src/routes/authRoutes');

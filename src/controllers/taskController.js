@@ -10,10 +10,14 @@ exports.createTask = async (req, res) => {
   const { nombre_tablero, circuito, lugar, fecha, descripcion,username } = req.body;
   const newTask = new Task({ nombre_tablero, circuito, lugar, fecha, descripcion, username});
   await newTask.save();
+  res.send('createTask')
+
+ 
+  
   req.flash('success_msg', 'Tarea creada con éxito.');
   res.redirect('/tasks');
 };
-console.log('req.body');
+
 
 exports.getTasksall = async (req, res) => {
   const tasks = await Task.find();
