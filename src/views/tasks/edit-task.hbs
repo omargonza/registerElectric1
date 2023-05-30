@@ -1,0 +1,76 @@
+{{#each errors}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>Edit Note</h3>
+    </div>
+    <div class="card-body">
+      <form action="/tasks/edit-task/{{task._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="mb-3">
+          <label for="title">Nombre del tablero:</label>
+          <input
+            type="text"
+            name="nombre del tablero"
+            class="form-control"
+            value="{{task.nombre_tablero}}"
+          />
+        </div>
+          <div class="mb-3">
+          <label for="title">Circuito:</label>
+          <input
+            type="text"
+            name="circuito"
+            class="form-control"
+            value="{{task.circuito}}"
+          />
+        </div>
+          <div class="mb-3">
+          <label for="title">Lugar:</label>
+          <input
+            type="text"
+            name="fecha"
+            class="form-control"
+            value="{{task.lugar}}"
+          />
+            <div class="mb-3">
+          <label for="title">Fecha:</label>
+          <input
+            type="date"
+            name="Fecha"
+            class="form-control"
+            value="{{task.fecha}}"
+          />
+            <div class="mb-3">
+          <label for="title">Materiales:</label>
+          <input
+            type="text"
+            name="materiales"
+            class="form-control"
+            value="{{task.materiales}}"
+          />
+        </div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="descripción">Descripción:</label>
+          <textarea
+            name="descripción"
+            class="form-control"
+          >{{note.descripcion}}</textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

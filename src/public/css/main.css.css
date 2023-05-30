@@ -1,11 +1,30 @@
 
 body {
-    background: #f5f6fa;
+    background:rgb(31, 30, 30);
 font-family: 'Oswald', sans-serif;
 
-    overflow: hidden;
-}
 
+ 
+}
+ 
+
+  .btn-primary {
+    background-color: red;
+    border-color: red;
+  }
+ 
+  .custom-container {
+    background-color: rgb(23, 20, 20);
+
+
+    padding: 20px;
+  }
+.logo {
+  max-width: 100px;
+  max-height: 100px;
+  filter: brightness(1.2); /* Ajusta el brillo de la imagen */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade una sombra a la imagen */
+}
 /*.index {
     width: 100vw;
     height: 100vh;

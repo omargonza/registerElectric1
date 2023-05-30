@@ -1,0 +1,32 @@
+<div class="row">
+  {{#each notes}}
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          {{ nombre_tablero }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+            {{ circuito }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+              {{ lugar }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                {{ fecha }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                  {{ materiales }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                     </h4>
+             <p>{{ description }} </p><a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+               {{ username }} <a href="/tasks/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+        <!-- DELETE REQUEST -->
+        <form action="/tasks/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h1>Hello {{user.name}}</h1>
+      <p clsss="lead">There are not Notes yet.</p>
+      <a href="/tasks/add" class="btn btn-success btn-block">Crear tarea!</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
